@@ -1,0 +1,3 @@
+PARA ARRANCAR EL PROGRAMA: npm i y intro. Esto revisa el package.json y instala las dependecias oportunas.
+
+
