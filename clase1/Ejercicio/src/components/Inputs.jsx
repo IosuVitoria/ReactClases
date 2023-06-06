@@ -3,7 +3,7 @@
 // En este componente podemos observar dos props que entran dentro de la función
 // y que serán invocados desde el fichero App.js
 
-function Input (text, placeholder) {
+function Input ({text, placeholder}) {
   return (
     <div>
       <label htmlFor={text}>{text}</label>

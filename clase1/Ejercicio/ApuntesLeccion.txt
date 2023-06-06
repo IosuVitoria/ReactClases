@@ -22,7 +22,22 @@ function Input (text, placeholder) {
 } 
 
 En esta función vemos como la función pasa el parámetro placeholder al ser invocada y este pasará a ser sustituido dentro del espacio para placeholder 
-en el lenguaje HTML. 
+en el lenguaje HTML. Avancemos un poco más y veremos que al final el ejercicio queda:
+
+function Input ({text, placeholder}) {
+  return (
+    <div>
+      <label htmlFor={text}>{text}</label>
+      <input type="text" placeholder={placeholder} id={text}/>
+    </div>
+
+  )
+}
+
+export default Input
+
+MUCHO OJO: LAS LLAVES DEBEN SER INCORPORADAS TANTO EN EL PROPIO LUGAR DÓNDE VA EL PROP
+COMO EN EL LUGAR DE LOS PARÁMETROS.
 
 
 
