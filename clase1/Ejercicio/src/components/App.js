@@ -1,15 +1,10 @@
 import '../styles/App.css';
-import Boton from './Button';
-import Formulario from './Inputs';
+import Form from "./Form";
 
 function App() {
   return (
       <div className="App">
-        
-        <Formulario />
-
-        <Boton />
-        
+      <Form />
       </div>
   );
 }

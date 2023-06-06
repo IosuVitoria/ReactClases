@@ -1,6 +1,9 @@
-function Boton(){
-    return(
-        <button>Enviar</button>
+function Button () {
+    return (
+      <div>
+        <button>Aceptar</button>
+      </div>
     )
-}
-export default Boton;
+  }
+  
+  export default Button

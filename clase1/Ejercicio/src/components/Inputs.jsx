@@ -1,21 +1,16 @@
+//Ojo, al ser un componente la función debe llevar el nombre en mayúsculas.
 
-function App() {
+// En este componente podemos observar dos props que entran dentro de la función
+// y que serán invocados desde el fichero App.js
+
+function Input (text, placeholder) {
   return (
-    <div className="App">
-      <div>
-        <label htmlFor="input1">Nombre</label>
-        <input type="text" id="input1" placeholder="Input 1" />
-      </div>
-      <div>
-        <label htmlFor="input2">Cargo</label>
-        <input type="text" id="input2" placeholder="Input 2" />
-      </div>
-      <div>
-        <label htmlFor="input3">email</label>
-        <input type="text" id="input3" placeholder="Input 3" />
-      </div>
+    <div>
+      <label htmlFor={text}>{text}</label>
+      <input type="text" placeholder={placeholder} id={text}/>
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default Input
