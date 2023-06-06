@@ -1,0 +1,1 @@
+Objetivo del video: Crear un buscador de imágenes.
