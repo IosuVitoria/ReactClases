@@ -1,0 +1,30 @@
+1º Paso: Instalar todas las dependencias.
+
+2º Paso: Empezar a trabajar en los componentes.
+En este ejercicio se generan tres componentes: Formulario, botón y input. El objetivo de este 
+ejercicio es mostrar un formulario con dos input y un botón. 
+Debemos de poder pasar valores desde el componente para que sean leídos por el HTML e incorporados.
+
+3º Paso: Creamos los archivos .jsx para cada componente.
+
+OJO TEORÍA:
+
+Cuando hablamos de una variable debemos de colocarla entre corchetes dentro de jsx.
+
+function Input (text, placeholder) {
+  return (
+    <div>
+      <label htmlFor="text"></label>
+      <input type="text" placeholder={placeholder} id="text"/>
+    </div>
+
+  )
+} 
+
+En esta función vemos como la función pasa el parámetro placeholder al ser invocada y este pasará a ser sustituido dentro del espacio para placeholder 
+en el lenguaje HTML. 
+
+
+
+
+
