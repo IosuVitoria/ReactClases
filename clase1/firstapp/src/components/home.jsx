@@ -1,16 +1,16 @@
 import Boton from "./Button"
 
-function Home(){
+function Home(children){
 
     return (
-        <div>
+        <>
             <h2>Este el Home</h2>
-            <Boton />
-        </div>
-        
+            <Boton estilo ="rojo" texto="Registrar usuario" />
 
+            {children}
+        </>
     )
-}
+}   
 
 export default Home;
 

@@ -1,6 +1,6 @@
-function Boton(){
+function Boton(estilo,texto){
     return(
-        <button>Aceptar</button>
+        <button className={estilo}>{texto}</button>
     )
 }
 export default Boton;
