@@ -1,0 +1,16 @@
+Crear una carpeta core que es la que tiene lo que se va a mostrar.
+Después crear carpetas por componente.
+
+Interesante: Si escribimos rafce --> Obtenemos esta estructura básica:
+
+import React from 'react'
+
+const nav = () => {
+  return (
+    <div>nav</div>
+  )
+}
+
+export default nav
+
+
