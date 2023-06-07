@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Argentina",
+      "capital": "Buenos Aires",
+      "population": 45195777,
+      "continent": "South America"
+    },
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "population": 83783942,
+      "continent": "Europe"
+    },
+    {
+      "name": "India",
+      "capital": "New Delhi",
+      "population": 1393409038,
+      "continent": "Asia"
+    },
+    {
+      "name": "South Africa",
+      "capital": "Pretoria",
+      "population": 59308690,
+      "continent": "Africa"
+    },
+    {
+      "name": "Australia",
+      "capital": "Canberra",
+      "population": 25499884,
+      "continent": "Oceania"
+    }
+]
+  
