@@ -24,7 +24,12 @@ function App() {
   }, [count]);
 
   const mapPokemons = () => {
-    return listPokemon.map((pokemon, i) => <li key={i}>{pokemon.name}</li>);
+    return listPokemon.map((pokemon, i) => (
+      <li key={i}>
+        {pokemon.name}
+        <img src={pokemon.url} alt="pokemon" />
+      </li>
+    ));
   };
 
  
