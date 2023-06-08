@@ -1,11 +1,9 @@
-const languages = ({ languages, wrlevel, splevel}) => {
+const languages = ({ languagename, wrlevel, splevel}) => {
     return (
       <div>
-        <h3>{languages}</h3>
-        <p>Writing Level: {wrlevel}</p>
-        <p>Speaking Level: {splevel}</p>
-        
-
+        <h3>{languageData.languagename}</h3>
+        <p></p>
+        <p></p>
       </div>
     );
   };
