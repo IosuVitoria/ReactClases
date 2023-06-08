@@ -1,0 +1,40 @@
+  PRIMERA OBSERVACIÓN EN EL USO DE LOS FETCH
+  
+  //fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=200")
+    //.then((response) => response.json())
+    //.then((data) =>{
+      //console.log(data.results);
+      // Si ponemos solo setListPokemon(data.results) entramos en un ciclo infinito.
+      // React renderiza de nuevo el componente y vuelve a meterse en el fetch y así 
+      // de manera infinita.
+      //setListPokemon(data.results);
+  //})
+
+OBSERVACIÓN EN EL CASO DEL USO DE USESTATE
+
+  //Pasamos primeramente un array vacío porque nos adaptamos a los datos que vienen del servidor que son un
+  //array vacío.
+  
+  const [listPokemon, setListPokemon] = useState([])
+
+  //Concepto interesante: hook.
+
+
+USEEFECT DE REACT
+
+  useEffect(() =>(
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=200")
+    .then((response) => response.json())
+    .then((data) =>{
+      console.log(data.results);
+      // Si ponemos solo setListPokemon(data.results) entramos en un ciclo infinito.
+      // React renderiza de nuevo el componente y vuelve a meterse en el fetch y así 
+      // de manera infinita.
+      setListPokemon(data.results);
+    })
+
+  ), []) //Ese array vacío es un array de dependencias. Es un controlador. Al dejarlo vacío se ejecuta el bloque
+  //una sola vez. En los corchetes se puede definir cada cuanto se ejecuta ese bucle de código. Otro caso es si lo relleno con una 
+  // variable por ejemplo el bloque se ejecuta cuando la variable cambia de valor.
+
+
