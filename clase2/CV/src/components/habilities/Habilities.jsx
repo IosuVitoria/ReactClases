@@ -1,5 +1,4 @@
-
-const habilities = ({ habilities }) => {
+const Habilities = ({ habilities }) => {
   return (
     <div>
       <h2>Habilities</h2>
@@ -12,4 +11,4 @@ const habilities = ({ habilities }) => {
   );
 };
 
-export default habilities;
+export default Habilities;

@@ -4,9 +4,12 @@ import Hero from "./components/Hero";
 import Education from "./components/education/Education";
 import Experience from "./components/experience/Experience";
 import Languages from "./components/languages/Language"; // Asegúrate de utilizar el nombre correcto del componente
+import Habilities from "./components/habilities/Habilities";
+import Volunteer from "./components/volunteer/Volunteer";
+
 
 const { hero, education, experience, languages, habilities, volunteer } = CV;
-
+console.log(CV)
 function App() {
   return (
     <div className="App">
@@ -35,17 +38,22 @@ function App() {
         ))}
       </div>
       <div>
-        <h1>Languages</h1>
-        {languages.map((item, index) => (
-          <Languages
-            key={index}
-            name={item.name}
-            wrlevel={item.wrlevel}
-            splevel={item.splevel}
-          />
-        ))}
+        <h1>Habilities</h1>
+        <Habilities habilities={habilities} />
       </div>
+      <div>
+        <h1>Volunteer</h1>
+        {volunteer.map((volunteer, index) =>
+        <Volunteer 
+        key={index}
+        name={volunteer.name} 
+        where = {volunteer.where} 
+        description = {volunteer.description}/>
+        )}
+      </div>
+     
     </div>
+
   );
 }
 

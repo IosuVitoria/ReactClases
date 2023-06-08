@@ -1,8 +1,7 @@
-const experience = ({ name, date, where, description }) => {
+const volunteer = ({ name, where, description }) => {
     return (
       <div>
         <h3>{name}</h3>
-        <p>Date: {date}</p>
         <p>Where: {where}</p>
         <p>Description: {description}</p>
 
@@ -10,4 +9,4 @@ const experience = ({ name, date, where, description }) => {
     );
   };
 
-export default experience
+export default volunteer
