@@ -56,8 +56,8 @@ export const CV = {
           "Manage the company, which is a multi-billion dollar multinational corporation that develops and manufactures advanced weapon and defense technologies. The company manufactures the armor worn by Iron Man and War Machine.",
       },
     ],
-    languages: {
-      language: "English",
+    languagesData: {
+      languagename: "English",
       wrlevel: "Native",
       splevel: "Native",
     },

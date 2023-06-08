@@ -3,12 +3,11 @@ import { CV } from "./CV/CV";
 import Hero from "./components/Hero";
 import Education from "./components/education/Education";
 import Experience from "./components/experience/Experience";
-import Languages from "./components/languages/Language"; // Asegúrate de utilizar el nombre correcto del componente
 import Habilities from "./components/habilities/Habilities";
 import Volunteer from "./components/volunteer/Volunteer";
 
 
-const { hero, education, experience, languages, habilities, volunteer } = CV;
+const { hero, education, experience, languagesData, habilities, volunteer } = CV;
 console.log(CV)
 function App() {
   return (
@@ -40,6 +39,12 @@ function App() {
       <div>
         <h1>Habilities</h1>
         <Habilities habilities={habilities} />
+      </div>
+      <div>
+        <h1>Languages</h1>
+        <h3>{languagesData.languagename}</h3>
+         <p>Speaking label: {languagesData.splevel}</p>
+         <p>Writing label: {languagesData.wrlevel}</p>
       </div>
       <div>
         <h1>Volunteer</h1>
