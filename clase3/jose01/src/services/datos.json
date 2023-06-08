@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "Sartén",
+      "price": 29.99,
+      "description": "Sartén antiadherente de 26 cm",
+      "image": "https://ejemplo.com/imagen-sarten.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Cuchillo de Chef",
+      "price": 49.99,
+      "description": "Cuchillo de chef de acero inoxidable",
+      "image": "https://ejemplo.com/imagen-cuchillo.jpg"
+    }
+  ]
