@@ -1,42 +1,40 @@
-import OneCharacter from "./OneCharacter";
+import OneCharacter from "./OneCharacter"
 
-const Characters = ({list, setFavourites,favourites}) => {
-  // Mapear la lista de elementos y crear un componente `OneCharacter` para cada elemento
-  
-  const handleClick = (event) => {
-    //Target hace referencia al elemento clicado.
-    //currentTarget hace referencia al elemento escuchado.
-    //Si tenemos un li con una imagen. Tu puedes clicar sobre una imagen pero escuchas sobre todo el elemento li que contiene a imagen.
-    const id = event.currentTarget.id;
-    const findCharacter = list.find((item) => {
+function Characters({ list, addNewFavorite }) {
+
+    const handleClick = (event) => {
+        //target--> referencia al elemento clicado 
+        //currentTaget--> referencia al elemento escuchado
+        const id = event.currentTarget.id;
+        const findCharacter = list.find((item) => {
+            return item.id === id
+        });
+
+        addNewFavorite(findCharacter)
+        //guardar findCharacter -> array de favoritos
+
+        //el array  favorito debe ser una variable de estado, para que se renderice constantemente
         console.log(findCharacter)
-        return item.id === id;
-        
+
+
+    }
+
+    //mapeo el listado de personajes 
+    const listCharacters = list.map((item) => {
+        return (
+            <li key={item.id} id={item.id} onClick={handleClick}>
+                <OneCharacter item={item} />
+            </li>
+        )
     })
-  }
 
-  setFavourites([...favourites, findCharacter])
-  // Guardar findCharacter => array de favoritos.
-
-  //La varaible (el array de favoritos) en la que guardamos debe ser una variable de estado  que se renderice continuamente.
-  
-  const listCharacters = list.map((item, index) => {
     return (
-      <li key={index} onClick={handleClick} id ={item.id}>
-        <OneCharacter item={item} />
-      </li>
-    );
-  });
+        <>
+            <ul>
+                {listCharacters}
+            </ul>
+        </>
+    )
 
-  return (
-    <>
-      <h2>LISTADO DE PERSONAJES</h2>
-      <ul>
-        {/* Renderizar los componentes `OneCharacter` */}
-        {listCharacters}
-      </ul>
-    </>
-  );
-};
-
-export default Characters;
+}
+export default Characters

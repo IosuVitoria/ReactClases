@@ -1,17 +1,40 @@
-import image from "../assets/image.jpeg"
+import imageS from "../assets/slytherin.jpeg";
+import imageG from "../assets/Gryffindor.jpeg";
+import imageH from "../assets/Hufflepuff.png";
+import imageR from "../assets/Ravenclaw.jpeg";
+import imageC from "../assets/fondocarta.jpg";
 
-
-const OneCharacter = ({item}) => {
-
-    const imgCharacter  = item.image ? item.image:image;
-  
+const imgCharacter = (item) => {
+  if (item.image !== "") {
     return (
-    <article>
-        <img src={imgCharacter} alt="Character" />
-        <h2>Actor / Actress: {item.actor}</h2>
-        <h3> Name of the character: {item.name}</h3>
-    </article>
-  )
-}
+      <div className="character-card" style={{ backgroundImage: `url(${imageC})` }}>
+        <img src={item.image} alt="Imagen" className="character-image" />
+        <p className="character-name">{item.name}</p>
+      </div>
+    );
+  } else {
+    let houseImage;
+    if (item.house === "Gryffindor") {
+      houseImage = imageG;
+    } else if (item.house === "Hufflepuff") {
+      houseImage = imageH;
+    } else if (item.house === "Ravenclaw") {
+      houseImage = imageR;
+    } else if (item.house === "Slytherin") {
+      houseImage = imageS;
+    }
 
-export default OneCharacter
+    return (
+      <div className="character-card" style={{ backgroundImage: `url(${imageC})` }}>
+        <img src={houseImage} alt={`Imagen ${item.house}`} className="character-image" />
+        <p className="character-name">{item.name}</p>
+      </div>
+    );
+  }
+};
+
+const OneCharacter = ({ item }) => {
+  return <li>{imgCharacter(item)}</li>;
+};
+
+export default OneCharacter;
