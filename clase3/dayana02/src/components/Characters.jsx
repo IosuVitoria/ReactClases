@@ -1,40 +1,22 @@
-import OneCharacter from "./OneCharacter"
+// Characters.js
+import OneCharacter from "./OneCharacter";
 
 function Characters({ list, addNewFavorite }) {
+  const handleClick = (event) => {
+    const id = event.currentTarget.id;
+    const findCharacter = list.find((item) => item.id === id);
+    const { name, image } = findCharacter;
+    addNewFavorite({ name, image });
+    console.log(findCharacter);
+  };
 
-    const handleClick = (event) => {
-        //target--> referencia al elemento clicado 
-        //currentTaget--> referencia al elemento escuchado
-        const id = event.currentTarget.id;
-        const findCharacter = list.find((item) => {
-            return item.id === id
-        });
+  const listCharacters = list.map((item) => (
+    <li key={item.id} id={item.id} onClick={handleClick}>
+      <OneCharacter item={item} />
+    </li>
+  ));
 
-        addNewFavorite(findCharacter)
-        //guardar findCharacter -> array de favoritos
-
-        //el array  favorito debe ser una variable de estado, para que se renderice constantemente
-        console.log(findCharacter)
-
-
-    }
-
-    //mapeo el listado de personajes 
-    const listCharacters = list.map((item) => {
-        return (
-            <li key={item.id} id={item.id} onClick={handleClick}>
-                <OneCharacter item={item} />
-            </li>
-        )
-    })
-
-    return (
-        <>
-            <ul>
-                {listCharacters}
-            </ul>
-        </>
-    )
-
+  return <ul>{listCharacters}</ul>;
 }
-export default Characters
+
+export default Characters;

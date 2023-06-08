@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+// App.js
+import { useEffect, useState } from 'react';
 import './App.css';
 import axios from "axios";
-import { useState } from 'react';
 import Characters from './components/Characters';
 import CharacterFilter from './components/CharacterFilter';
+import imageC from "./assets/fondocarta.jpg";
 
 function App() {
   const [listCharacters, setListCharacters] = useState([]);
@@ -39,7 +40,7 @@ function App() {
   const filteredCharacters = listCharacters.filter(character =>
     character.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  console.log (favorites);
   return (
     <div className="App">
       <h2>Listado de personajes</h2>
@@ -54,9 +55,19 @@ function App() {
       </div>
       <main>
         <Characters list={filteredCharacters} addNewFavorite={addNewFavorite} />
+        <h2>PERSONAJES FAVORITOS DEL USUARIO</h2>
+          <ul>
+            {favorites.map((favorite) => (
+              <li key={favorite.id} style={{ backgroundImage: `url(${imageC})` }}>
+              <img src={favorite.image} alt={`character image`} className="character-image" />
+              <p>Name: {favorite.name}</p>
+              </li>
+              ))}
+          </ul>
       </main>
     </div>
   );
 }
 
 export default App;
+
