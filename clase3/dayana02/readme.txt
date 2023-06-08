@@ -63,15 +63,23 @@ EXPLICACIÓN
 const imgCharacter  = item.image ? item.image:image;
 
 
-La línea de código que has proporcionado utiliza una expresión ternaria para asignar un valor a la constante `imgCharacter`. Aquí tienes una explicación paso a paso:
+La línea de código que has proporcionado utiliza una expresión ternaria para asignar un valor a la constante `imgCharacter`. Tomado de Chat GPT. Repaso
+de operadores ternarios.
 
-1. `item.image`: Supongo que `item` es un objeto que contiene información sobre un personaje y `image` es una propiedad de ese objeto que representa la imagen del personaje. 
+Aquí tienes una explicación paso a paso:
 
-2. `item.image ? item.image : image`: La expresión ternaria comienza con `item.image` como condición. Si `item.image` es evaluado como verdadero (es decir, si tiene un valor), se asigna el valor de `item.image` a `imgCharacter`. Si `item.image` es evaluado como falso (es decir, si es nulo, indefinido o una cadena vacía), se asigna el valor de `image` a `imgCharacter`.
+1. `item.image`: Supongo que `item` es un objeto que contiene información sobre un personaje y 
+`image` es una propiedad de ese objeto que representa la imagen del personaje. 
 
-En resumen, la línea de código verifica si `item` tiene una propiedad `image`. Si la tiene, `imgCharacter` se asigna con el valor de `item.image`. Si no tiene esa propiedad, `imgCharacter` se asigna con el valor de `image`.
+2. `item.image ? item.image : image`: La expresión ternaria comienza con `item.image` como condición. 
+Si `item.image` es evaluado como verdadero (es decir, si tiene un valor), se asigna el valor de `item.image` a `imgCharacter`.
+ Si `item.image` es evaluado como falso (es decir, si es nulo, indefinido o una cadena vacía), se asigna el valor de `image` a `imgCharacter`.
 
-Esto permite proporcionar una imagen por defecto (`image`) en caso de que `item` no tenga una imagen específica. De esta manera, se asegura que `imgCharacter` tenga un valor válido para mostrar en el componente `OneCharacter`.
+En resumen, la línea de código verifica si `item` tiene una propiedad `image`. 
+Si la tiene, `imgCharacter` se asigna con el valor de `item.image`. Si no tiene esa propiedad, `imgCharacter` se asigna con el valor de `image`.
+
+Esto permite proporcionar una imagen por defecto (`image`) en caso de que `item` no tenga una imagen específica.
+ De esta manera, se asegura que `imgCharacter` tenga un valor válido para mostrar en el componente `OneCharacter`.
 
 Espero que esta explicación te sea útil. Si tienes más preguntas, no dudes en hacerlas.
 
